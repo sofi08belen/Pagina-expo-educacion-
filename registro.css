@@ -1,0 +1,55 @@
+body {
+    background-image: linear-gradient(rgb(14, 13, 24),  rgb(0, 0, 141), rgb(98, 1, 139));
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0;
+}
+
+.form-container {
+    width: 350px;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.1); /* Fondo translúcido */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 249, 249);
+    text-align: center;
+    backdrop-filter: blur(10px); /* Efecto de cristal */
+}
+
+.h2, .email, .nombre, .contraseña, .in_sesion {
+    text-align: center;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+    text-align: center;
+    padding: 1px;
+    background-color: rgb(3, 3, 70);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(48, 3, 65);
+}
+
+link{
+    color: aliceblue;
+}

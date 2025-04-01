@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <div class="form-container">
+   <div class="h2"> <h2>Formulario de Registro</h2></div> <br>
+    <form action="registro.php" method="POST">
+        <div class="nombre"><label for="nombre">Nombre de usuario:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <div class="email"><label for="email">Correo Electrónico:</label></div><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <div class="contraseña"><label for="contrasenha">Contraseña:</label></div><br>
+        <input type="password" id="contrasenha" name="contrasenha" required><br><br>
+
+        <div class="svg-wrapper">
+            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+              <rect id="shape" height="40" width="150" />
+              <div id="text">
+                <button type="submit"><a href=""><span class="spot"></span>Registrar</a></button>
+              </div>
+            </svg>
+          </div><br>
+          <div class="in_sesion"><h3>Si ya tienes cuenta, Inicia Sesion</h3></div>
+
+    
+     <button> <nav>
+        
+      <a href="login.html">Inicia sesion</a>
+</nav>
+</button>
+    
+
+    </form>
+  </div>
+</body>
+</html>
