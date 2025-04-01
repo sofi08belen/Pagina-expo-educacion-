@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
+  <div class="pentagono azul">
+     <img src="./pentagono azul sin fondo .png" alt="pentagonos">
+    </div>
+
+      <img  class="pentagono lila" src="./pentagono lila in fondo .png" alt="pentagonos">
+
   <div class="form-container">
    <div class="h2"> <h2>Formulario de Registro</h2></div> <br>
     <form action="registro.php" method="POST">
@@ -41,5 +47,33 @@
 
     </form>
   </div>
+
+  <script>
+    const $ = (s) => document.querySelector(s)
+
+    const formulario = $("form")
+
+    formulario.addEventListener("submit", (e) => {
+      e.preventDefault()
+
+      fetch(formulario.action, {
+        method: formulario.method,
+        body: new FormData(formulario)
+      }).then(r => r.json())
+      .then(resultado => {
+        if(resultado["resultado"] === "ok"){
+          window.location.url = "pag_principal.html"
+        }else{
+          alert(resultado["resultado"])
+        }
+
+      })
+
+    })
+
+
+  </script>
+
+
 </body>
 </html>

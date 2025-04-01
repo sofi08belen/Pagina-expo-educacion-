@@ -30,7 +30,7 @@ body {
 button {
     width: 90%;
     text-align: center;
-    padding: 10px;
+    padding: 6px;
     background-color: rgb(3, 3, 70);
     color: white;
     border: none;
@@ -53,6 +53,10 @@ header {
     position: absolute;
     top: 0;
     
+}
+
+a{
+    color: rgb(250, 249, 247);
 }
 
 

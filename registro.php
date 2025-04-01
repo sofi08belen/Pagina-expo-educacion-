@@ -1,9 +1,12 @@
 <?php
+header("Content-Type: application/json");
 // Datos de conexión a la base de datos
 $servername = "localhost";
 $basededatos = "expo_edu";
 $usuario = "root";
 $contrasenha_bd = "";
+
+$respuestas = [];
 
 // Crear la conexión
 $conn = mysqli_connect($servername, $usuario, $contrasenha_bd, $basededatos);
@@ -29,12 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO usuarios (nombre, email, contrasenha) VALUES ('$nombre', '$email', '$contrasenha_hash')";
 
         if (mysqli_query($conn, $sql)) {
-            header("Location: pag_principal.html");
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            //header("Location: pag_principal.html");
+            $respuestas["resultado"] = "ok";
+            echo json_encode($respuestas);
+        } else { 
+            $respuestas["resultado"] = "Error: " . $sql . "<br>" . mysqli_error($conn);
+            echo json_encode($respuestas);
         }
     } else {
-        echo "Por favor, completa todos los campos del formulario.";
+        $respuestas["resultado"] = "Por favor, completa todos los campos del formulario.";
+        echo json_encode($respuestas);
     }
 }
 

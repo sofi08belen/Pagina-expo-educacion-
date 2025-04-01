@@ -5,6 +5,8 @@ body {
     align-items: center; /* Centra verticalmente */
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .form-container {
@@ -37,7 +39,7 @@ input {
 button {
     width: 50%;
     text-align: center;
-    padding: 1px;
+    padding: 6px;
     background-color: rgb(3, 3, 70);
     color: white;
     border: none;
@@ -47,9 +49,31 @@ button {
 }
 
 button:hover {
-    background-color: rgb(48, 3, 65);
+    background-color: rgb(94, 74, 206);
 }
 
-link{
-    color: aliceblue;
+a{
+    color: rgb(255, 255, 255);
 }
+
+.pentagono.azul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px; /* Ajusta según el tamaño del pentágono */
+    height: 350px; /* Ajusta según el tamaño del pentágono */
+   
+  }
+  
+.pentagono.azul img {
+    width: 100%; /* Esto hace que la imagen se ajuste al tamaño del contenedor */
+    height: 100%; /* Esto hace que la imagen se ajuste al tamaño del contenedor */
+  }
+
+ .pentagono.lila{
+    position: absolute;
+    bottom:  0;
+    right:  0;
+    width: 250px;
+    height: 350px;
+ } 
