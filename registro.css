@@ -56,8 +56,9 @@ a{
     color: rgb(255, 255, 255);
 }
 
-body {
+.cuerpo {
     background-image: url(https://www.expoeducacion.com.py/archivos/banners/proyectos-destacados/responsive_3hex%C3%A1gonos.webp), url(https://www.expoeducacion.com.py/archivos/banners/proyectos-destacados/responsive_3hex%C3%A1gonos.webp);
     background-repeat: no-repeat, no-repeat;
     background-position: 30% 80%, 110% 120%;
+    height: 100vh;
 }

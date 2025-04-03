@@ -9,66 +9,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-  
-
-  <div class="form-container">
-   <div class="h2"> <h2>Formulario de Registro</h2></div> <br>
-    <form action="registro.php" method="POST">
-        <div class="nombre"><label for="nombre">Nombre de usuario:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-
-        <div class="email"><label for="email">Correo Electrónico:</label></div><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <div class="contraseña"><label for="contrasenha">Contraseña:</label></div><br>
-        <input type="password" id="contrasenha" name="contrasenha" required><br><br>
-
-        <div class="svg-wrapper">
-            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
-              <rect id="shape" height="40" width="150" />
-              <div id="text">
-                <button type="submit"><a href=""><span class="spot"></span>Registrar</a></button>
-              </div>
-            </svg>
-          </div><br>
-          <div class="in_sesion"><h3>Si ya tienes cuenta, Inicia Sesion</h3></div>
-
-    
-     <button> <nav>
-        
-      <a href="login.html">Inicia sesion</a>
-</nav>
-</button>
-    
-
-    </form>
+  <div class="cuerpo">
+    <div class="form-container">
+      <div class="h2"> <h2>Formulario de Registro</h2></div> <br>
+       <form action="registro.php" method="POST">
+           <div class="nombre"><label for="nombre">Nombre de usuario:</label><br>
+           <input type="text" id="nombre" name="nombre" required><br><br>
+   
+           <div class="email"><label for="email">Correo Electrónico:</label></div><br>
+           <input type="email" id="email" name="email" required><br><br>
+   
+           <div class="contraseña"><label for="contrasenha">Contraseña:</label></div><br>
+           <input type="password" id="contrasenha" name="contrasenha" required><br><br>
+   
+           <div class="svg-wrapper">
+               <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                 <rect id="shape" height="40" width="150" />
+                 <div id="text">
+                   <button type="submit"><a href=""><span class="spot"></span>Registrar</a></button>
+                 </div>
+               </svg>
+             </div><br>
+             <div class="in_sesion"><h3>Si ya tienes cuenta, Inicia Sesion</h3></div>
+   
+       
+        <button> <nav>
+           
+         <a href="login.html">Inicia sesion</a>
+   </nav>
+   </button>
+       
+   
+       </form>
+     </div>
+   
+     <script>
+       const $ = (s) => document.querySelector(s)
+   
+       const formulario = $("form")
+   
+       formulario.addEventListener("submit", (e) => {
+         e.preventDefault()
+   
+         fetch(formulario.action, {
+           method: formulario.method,
+           body: new FormData(formulario)
+         }).then(r => r.json())
+         .then(resultado => {
+           if(resultado["resultado"] === "ok"){
+             window.location.url = "pag_principal.html"
+           }else{
+             alert(resultado["resultado"])
+           }
+   
+         })
+   
+       })
+   
+   
+     </script>
   </div>
 
-  <script>
-    const $ = (s) => document.querySelector(s)
-
-    const formulario = $("form")
-
-    formulario.addEventListener("submit", (e) => {
-      e.preventDefault()
-
-      fetch(formulario.action, {
-        method: formulario.method,
-        body: new FormData(formulario)
-      }).then(r => r.json())
-      .then(resultado => {
-        if(resultado["resultado"] === "ok"){
-          window.location.url = "pag_principal.html"
-        }else{
-          alert(resultado["resultado"])
-        }
-
-      })
-
-    })
-
-
-  </script>
+  
 
 
 </body>
