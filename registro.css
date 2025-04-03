@@ -59,6 +59,11 @@ a{
 .cuerpo {
     background-image: url(https://www.expoeducacion.com.py/archivos/banners/proyectos-destacados/responsive_3hex%C3%A1gonos.webp), url(https://www.expoeducacion.com.py/archivos/banners/proyectos-destacados/responsive_3hex%C3%A1gonos.webp);
     background-repeat: no-repeat, no-repeat;
-    background-position: 30% 80%, 110% 120%;
+    background-position: 0% 0%, 110% 120%;
     height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 200px, 300px;
 }
