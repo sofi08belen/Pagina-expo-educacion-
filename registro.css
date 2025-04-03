@@ -56,24 +56,8 @@ a{
     color: rgb(255, 255, 255);
 }
 
-.pentagono.azul{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px; /* Ajusta según el tamaño del pentágono */
-    height: 350px; /* Ajusta según el tamaño del pentágono */
-   
-  }
-  
-.pentagono.azul img {
-    width: 100%; /* Esto hace que la imagen se ajuste al tamaño del contenedor */
-    height: 100%; /* Esto hace que la imagen se ajuste al tamaño del contenedor */
-  }
-
- .pentagono.lila{
-    position: absolute;
-    bottom:  0;
-    right:  0;
-    width: 250px;
-    height: 350px;
- } 
+body {
+    background-image: url(https://www.expoeducacion.com.py/archivos/banners/proyectos-destacados/responsive_3hex%C3%A1gonos.webp), url(https://www.expoeducacion.com.py/archivos/banners/proyectos-destacados/responsive_3hex%C3%A1gonos.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 30% 80%, 110% 120%;
+}
