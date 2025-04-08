@@ -1,5 +1,17 @@
-header{
-    background-color: aqua;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+header {
+    background-color: aqua;
+    min-height: 80px;
+}
+
+.ancho {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+}
 
